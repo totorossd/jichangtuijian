@@ -19,6 +19,7 @@ export interface Provider {
   description: string;
   longDescription?: string;
   tags: string[];
+  badge?: string;
   rating: number;
   startPrice: number; // Monthly price in CNY
   speedScore: number; // 0-100

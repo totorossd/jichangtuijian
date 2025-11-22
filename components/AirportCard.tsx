@@ -8,7 +8,14 @@ interface AirportCardProps {
 
 const AirportCard: React.FC<AirportCardProps> = ({ provider }) => {
   return (
-    <div className="bg-white dark:bg-slate-850 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 group flex flex-col h-full">
+    <div className="bg-white dark:bg-slate-850 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 group flex flex-col h-full relative">
+      
+      {provider.badge && (
+        <div className="absolute top-0 right-0 bg-gradient-to-bl from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-xl shadow-md z-20">
+          {provider.badge}
+        </div>
+      )}
+
       <div className="p-6 flex-1">
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">

@@ -13,6 +13,7 @@ export const PROVIDERS: Provider[] = [
     description: '高端全专线机场，主打稳定性与流媒体解锁。拥有自研隧道技术，晚高峰表现优异，适合对网络质量有极高要求的用户。',
     longDescription: '龙猫云是目前市面上稳定性第一梯队的机场服务商。它全线采用 IPLC 专线传输，不过墙，彻底解决了敏感时期被封锁的烦恼。对于需要频繁访问 Google、ChatGPT 以及观看 Netflix/Disney+ 4K 流媒体的高端用户来说，龙猫云提供了几乎零丢包的极致体验。虽然价格稍高于平均水平，但考虑到其提供的 SLA 99.9% 在线率保证，绝对物超所值。',
     tags: ['IPLC专线', '流媒体解锁', '低延迟'],
+    badge: '热点推荐',
     rating: 4.9,
     startPrice: 15,
     speedScore: 98,
@@ -32,6 +33,7 @@ export const PROVIDERS: Provider[] = [
     description: '性价比之选，线路丰富，能够满足各类流媒体和ChatGPT访问需求。拥有非常友好的新手教程和客服支持。',
     longDescription: '肥猫云主打“好用不贵”，是很多刚接触科学上网用户的首选。它提供了覆盖全球 20+ 个国家和地区的节点，无论是冷门地区 IP 需求，还是主流的港美日韩节点，都能轻松满足。肥猫云的客户端适配做得非常好，小白用户也能一键导入使用，无需复杂的配置。',
     tags: ['高性价比', '新手友好', '客服优'],
+    badge: '热点推荐',
     rating: 4.7,
     startPrice: 20,
     speedScore: 92,
@@ -194,6 +196,27 @@ export const PROVIDERS: Provider[] = [
       { name: "宇宙版", price: 90, period: "月付", traffic: "1000G", features: ["全线IEPL", "专属客服", "不限设备"] },
     ],
     reviews: COMMON_REVIEWS
+  },
+  {
+    id: 'kuku',
+    name: '酷酷云 (KuKu Cloud)',
+    description: '新晋高性价比混合线路机场，采用 IEPL 专线与优质中转节点混合负载，在保证核心应用体验的同时大幅降低了成本。',
+    longDescription: '酷酷云是近期表现非常亮眼的“黑马”机场。它巧妙地结合了 IEPL 专线（用于游戏和敏感数据）和优质公网中转（用于流媒体和下载），实现了价格与体验的完美平衡。对于预算有限但又不想牺牲稳定性的用户来说，酷酷云是一个极佳的折中方案。其晚高峰表现稳定，且对冷门流媒体的解锁支持也相当不错。',
+    tags: ['混合线路', '性价比黑马', '流媒体解锁'],
+    rating: 4.6,
+    startPrice: 15.9,
+    speedScore: 91,
+    stabilityScore: 92,
+    logoUrl: 'https://picsum.photos/seed/kuku/100/100',
+    features: ['IEPL+中转混合', '流媒体全解锁', '晚高峰不限速'],
+    plans: [
+      { name: "基础版", price: 15.9, period: "月付", traffic: "150G", features: ["混合线路", "流媒体解锁", "2个在线设备"] },
+      { name: "进阶版", price: 29.9, period: "月付", traffic: "400G", features: ["优先IEPL", "全节点解锁", "4个在线设备"] },
+    ],
+    reviews: [
+       { user: "Geek_007", rating: 5, date: "2024-11-10", content: "这价格能有专线真的是惊喜，打游戏延迟很低。" },
+       ...COMMON_REVIEWS
+    ]
   }
 ];
 
