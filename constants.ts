@@ -9,7 +9,7 @@ const COMMON_REVIEWS = [
 export const PROVIDERS: Provider[] = [
   {
     id: 'longmao',
-    name: '龙猫云 (Dragon Cat)',
+    name: '龙猫云 (TotoroCloud)',
     description: '高端全专线机场，主打稳定性与流媒体解锁。拥有自研隧道技术，晚高峰表现优异，适合对网络质量有极高要求的用户。',
     longDescription: '龙猫云是目前市面上稳定性第一梯队的机场服务商。它全线采用 IPLC 专线传输，不过墙，彻底解决了敏感时期被封锁的烦恼。对于需要频繁访问 Google、ChatGPT 以及观看 Netflix/Disney+ 4K 流媒体的高端用户来说，龙猫云提供了几乎零丢包的极致体验。虽然价格稍高于平均水平，但考虑到其提供的 SLA 99.9% 在线率保证，绝对物超所值。',
     tags: ['IPLC专线', '流媒体解锁', '低延迟'],
@@ -21,9 +21,11 @@ export const PROVIDERS: Provider[] = [
     logoUrl: 'https://picsum.photos/seed/longmao/100/100',
     features: ['全节点解锁 Netflix/Disney+', '不限制设备数量', 'SLA 99.9% 保证'],
     plans: [
-      { name: "入门版", price: 15, period: "月付", traffic: "100G", features: ["IPLC专线", "流媒体解锁", "3个在线设备"] },
-      { name: "标准版", price: 55, period: "月付", traffic: "500G", features: ["IPLC专线", "全节点解锁", "5个在线设备"] },
-      { name: "至尊版", price: 99, period: "月付", traffic: "1000G", features: ["IPLC专线", "优先客服", "不限设备"] },
+      { name: "VIP1", price: 15, period: "月付", traffic: "100G", features: ["IPLC专线", "流媒体解锁", "不限制设备"] },
+      { name: "VIP2", price: 30, period: "月付", traffic: "200G", features: ["IPLC专线", "全节点解锁", "不限制设备"] },
+      { name: "VIP3", price: 60, period: "月付", traffic: "400G", features: ["IPLC专线", "优先客服", "不限制设备"] },
+      { name: "VIP4", price: 120, period: "月付", traffic: "1000G", features: ["IPLC专线", "优先客服", "不限制设备"] },
+      { name: "定制独享节点", price: 600, period: "月付", traffic: "500G", features: ["独享节点、独享带宽"] },
     ],
     reviews: COMMON_REVIEWS
   },
