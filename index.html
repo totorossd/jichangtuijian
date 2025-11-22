@@ -73,6 +73,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -109,47 +110,53 @@
                   '--tw-prose-td-borders': theme('colors.slate.700'),
                 },
               },
+              DEFAULT: {
+                 css: {
+                    '--tw-prose-links': theme('colors.primary.600'),
+                 }
+              }
             }),
           },
         },
       }
     </script>
     <style>
-      body {
-        background-color: #0f172a;
-        color: #e2e8f0;
-      }
       /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
+        background: #e2e8f0;
+      }
+      .dark ::-webkit-scrollbar-track {
         background: #1e293b;
       }
       ::-webkit-scrollbar-thumb {
-        background: #475569;
+        background: #94a3b8;
         border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #475569;
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #64748b;
       }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?external=react,react-dom"
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
-     <script type="module" src="/index.tsx"></script>
+     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

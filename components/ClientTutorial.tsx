@@ -188,23 +188,23 @@ const ClientTutorial: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Breadcrumb */}
-      <nav className="flex mb-8 text-sm text-slate-400">
-        <Link to="/" className="hover:text-white transition-colors">首页</Link>
+      <nav className="flex mb-8 text-sm text-gray-500 dark:text-slate-400">
+        <Link to="/" className="hover:text-gray-900 dark:hover:text-white transition-colors">首页</Link>
         <span className="mx-2">/</span>
-        <span className="text-slate-300">客户端教程</span>
+        <span className="text-gray-600 dark:text-slate-300">客户端教程</span>
         <span className="mx-2">/</span>
-        <span className="text-white font-medium capitalize">{key}</span>
+        <span className="text-gray-900 dark:text-white font-medium capitalize">{key}</span>
       </nav>
 
       {/* Hero Section */}
-      <div className="bg-slate-850 rounded-2xl border border-slate-700 overflow-hidden shadow-xl mb-10">
+      <div className="bg-white dark:bg-slate-850 rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden shadow-xl mb-10 transition-colors">
         <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center gap-8">
-          <div className="w-24 h-24 bg-slate-800 rounded-2xl flex items-center justify-center p-4 shadow-inner border border-slate-700 shrink-0">
+          <div className="w-24 h-24 bg-gray-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center p-4 shadow-inner border border-gray-200 dark:border-slate-700 shrink-0">
             <img src={data.icon} alt={key} className="w-full h-full object-contain" />
           </div>
           <div className="flex-1">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{data.title}</h1>
-            <p className="text-slate-300 text-lg mb-6 leading-relaxed">{data.description}</p>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">{data.title}</h1>
+            <p className="text-gray-600 dark:text-slate-300 text-lg mb-6 leading-relaxed">{data.description}</p>
             
             <div className="flex flex-wrap gap-4">
               {data.downloadLinks.map((link, idx) => (
@@ -216,7 +216,7 @@ const ClientTutorial: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 transition-all transform hover:-translate-y-1 ${
                     link.primary 
                       ? 'bg-primary-600 hover:bg-primary-500 text-white shadow-lg shadow-primary-600/30' 
-                      : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-600'
+                      : 'bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-700 dark:text-slate-300 border border-gray-300 dark:border-slate-600'
                   }`}
                 >
                   {link.primary && (
@@ -234,12 +234,12 @@ const ClientTutorial: React.FC = () => {
 
       {/* Steps */}
       <div className="space-y-12 relative">
-        <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-slate-800 z-0 hidden md:block"></div>
+        <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-slate-800 z-0 hidden md:block"></div>
         
         {data.steps.map((step, index) => (
           <div key={index} className="relative z-10 md:pl-24 group">
             {/* Step Number Bubble */}
-            <div className="hidden md:flex absolute left-0 w-16 h-16 rounded-full bg-slate-900 border-4 border-slate-800 items-center justify-center font-bold text-2xl text-slate-500 group-hover:text-primary-500 group-hover:border-primary-500 transition-colors shadow-xl">
+            <div className="hidden md:flex absolute left-0 w-16 h-16 rounded-full bg-white dark:bg-slate-900 border-4 border-gray-200 dark:border-slate-800 items-center justify-center font-bold text-2xl text-gray-400 dark:text-slate-500 group-hover:text-primary-600 dark:group-hover:text-primary-500 group-hover:border-primary-600 dark:group-hover:border-primary-500 transition-colors shadow-xl">
               {index + 1}
             </div>
 
@@ -248,39 +248,35 @@ const ClientTutorial: React.FC = () => {
                <div className="w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold">
                  {index + 1}
                </div>
-               <h3 className="text-xl font-bold text-white">{step.title}</h3>
+               <h3 className="text-xl font-bold text-gray-900 dark:text-white">{step.title}</h3>
             </div>
 
-            <div className="bg-slate-850 border border-slate-700 rounded-2xl overflow-hidden hover:border-slate-600 transition-colors">
+            <div className="bg-white dark:bg-slate-850 border border-gray-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-gray-300 dark:hover:border-slate-600 transition-colors">
               <div className="p-6 md:p-8">
-                <h3 className="hidden md:block text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <div className="prose prose-invert max-w-none text-slate-300 mb-6">
+                <h3 className="hidden md:block text-2xl font-bold text-gray-900 dark:text-white mb-4">{step.title}</h3>
+                <div className="prose prose-gray dark:prose-invert max-w-none text-gray-600 dark:text-slate-300 mb-6">
                   <p>{step.content}</p>
                 </div>
                 
                 {/* Visual Placeholder for Image */}
-                <div className="relative aspect-video bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center group/img overflow-hidden">
+                <div className="relative aspect-video bg-gray-100 dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-800 flex items-center justify-center group/img overflow-hidden">
                    {/* Placeholder Pattern */}
-                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-500 via-slate-900 to-slate-900"></div>
+                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-900 to-gray-900 dark:from-slate-500 dark:via-slate-900 dark:to-slate-900"></div>
                    <div className="text-center p-4 relative z-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-slate-600 mx-auto mb-2 group-hover/img:text-primary-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 dark:text-slate-600 mx-auto mb-2 group-hover/img:text-primary-600 dark:group-hover/img:text-primary-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
-                      <span className="text-slate-500 text-sm font-medium block mb-1">此处应展示图片：</span>
-                      <span className="text-slate-400 text-sm font-bold">"{step.imagePlaceholder}"</span>
+                      <span className="text-gray-500 dark:text-slate-500 text-sm font-medium block mb-1">此处应展示图片：</span>
+                      <span className="text-gray-400 dark:text-slate-400 text-sm font-bold">"{step.imagePlaceholder}"</span>
                    </div>
-                   {/* 
-                      In production, replace the above div with:
-                      <img src="/assets/tutorials/windows-step-1.jpg" alt={step.title} className="w-full h-full object-cover" /> 
-                   */}
                 </div>
 
                 {step.tips && (
-                  <div className="mt-6 bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 flex gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-500 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <div className="mt-6 bg-yellow-50 dark:bg-yellow-500/10 border border-yellow-200 dark:border-yellow-500/20 rounded-lg p-4 flex gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-600 dark:text-yellow-500 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                     </svg>
-                    <p className="text-sm text-yellow-200/80">{step.tips}</p>
+                    <p className="text-sm text-yellow-800 dark:text-yellow-200/80">{step.tips}</p>
                   </div>
                 )}
               </div>
@@ -290,26 +286,26 @@ const ClientTutorial: React.FC = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="mt-16 pt-12 border-t border-slate-800">
-        <h2 className="text-2xl font-bold text-white mb-8 text-center">常见问题 (FAQ)</h2>
+      <div className="mt-16 pt-12 border-t border-gray-200 dark:border-slate-800">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">常见问题 (FAQ)</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {data.faq.map((item, idx) => (
-            <div key={idx} className="bg-slate-900 p-6 rounded-xl border border-slate-800">
-              <h3 className="font-bold text-white mb-2 flex items-start gap-2">
-                <span className="text-primary-500">Q:</span>
+            <div key={idx} className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-gray-200 dark:border-slate-800">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2 flex items-start gap-2">
+                <span className="text-primary-600 dark:text-primary-500">Q:</span>
                 {item.question}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed pl-6">{item.answer}</p>
+              <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed pl-6">{item.answer}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* CTA */}
-      <div className="mt-12 bg-gradient-to-r from-primary-900/40 to-purple-900/40 rounded-2xl p-8 text-center border border-primary-500/30">
-        <h3 className="text-xl font-bold text-white mb-2">还是无法连接？</h3>
-        <p className="text-slate-300 mb-6">大多数机场提供商都拥有 24 小时在线客服。如果按照教程配置后仍无法使用，建议联系机场客服获取帮助。</p>
-        <Link to="/" className="inline-flex items-center justify-center px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors border border-slate-600">
+      <div className="mt-12 bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/40 dark:to-purple-900/40 rounded-2xl p-8 text-center border border-primary-100 dark:border-primary-500/30">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">还是无法连接？</h3>
+        <p className="text-gray-600 dark:text-slate-300 mb-6">大多数机场提供商都拥有 24 小时在线客服。如果按照教程配置后仍无法使用，建议联系机场客服获取帮助。</p>
+        <Link to="/" className="inline-flex items-center justify-center px-8 py-3 bg-white hover:bg-gray-50 text-gray-900 border border-gray-300 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white dark:border-slate-600 rounded-lg font-medium transition-colors">
           返回首页选择优质机场
         </Link>
       </div>

@@ -60,23 +60,23 @@ const AiChat: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-40 w-96 h-[500px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed bottom-24 right-6 z-40 w-96 h-[500px] bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-colors">
           {/* Header */}
-          <div className="bg-slate-800 p-4 border-b border-slate-700 flex items-center gap-2">
+          <div className="bg-gray-50 dark:bg-slate-800 p-4 border-b border-gray-200 dark:border-slate-700 flex items-center gap-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <h3 className="font-bold text-white">AI 选购助手</h3>
-            <span className="text-xs text-slate-400 ml-auto bg-slate-700 px-2 py-1 rounded">Gemini 2.5 Flash</span>
+            <h3 className="font-bold text-gray-900 dark:text-white">AI 选购助手</h3>
+            <span className="text-xs text-gray-500 dark:text-slate-400 ml-auto bg-gray-200 dark:bg-slate-700 px-2 py-1 rounded">Gemini 2.5 Flash</span>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-900">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-slate-900">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div 
                   className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm leading-relaxed ${
                     msg.role === 'user' 
                       ? 'bg-primary-600 text-white rounded-tr-none' 
-                      : 'bg-slate-800 text-slate-200 rounded-tl-none border border-slate-700'
+                      : 'bg-white dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded-tl-none border border-gray-200 dark:border-slate-700 shadow-sm'
                   }`}
                 >
                   {msg.text}
@@ -85,7 +85,7 @@ const AiChat: React.FC = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-slate-800 text-slate-400 rounded-2xl rounded-tl-none px-4 py-2 text-xs border border-slate-700 flex items-center gap-1">
+                <div className="bg-white dark:bg-slate-800 text-gray-500 dark:text-slate-400 rounded-2xl rounded-tl-none px-4 py-2 text-xs border border-gray-200 dark:border-slate-700 flex items-center gap-1 shadow-sm">
                    <span>Thinking</span>
                    <span className="animate-bounce">.</span>
                    <span className="animate-bounce delay-75">.</span>
@@ -97,7 +97,7 @@ const AiChat: React.FC = () => {
           </div>
 
           {/* Input */}
-          <div className="p-4 bg-slate-800 border-t border-slate-700">
+          <div className="p-4 bg-gray-100 dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
             <div className="flex gap-2">
               <input 
                 type="text" 
@@ -105,7 +105,7 @@ const AiChat: React.FC = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="例如：推荐一个看奈飞便宜的机场"
-                className="flex-1 bg-slate-900 text-white text-sm rounded-lg border border-slate-600 focus:border-primary-500 focus:outline-none px-3 py-2"
+                className="flex-1 bg-white dark:bg-slate-900 text-gray-900 dark:text-white text-sm rounded-lg border border-gray-300 dark:border-slate-600 focus:border-primary-500 focus:outline-none px-3 py-2"
               />
               <button 
                 onClick={handleSend}

@@ -2,9 +2,9 @@ import React from 'react';
 
 const SeoContent: React.FC = () => {
   return (
-    <section className="py-16 border-t border-slate-800 bg-slate-900/30">
+    <section className="py-16 border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/30 transition-colors">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <article className="prose prose-invert prose-lg max-w-none">
+        <article className="prose prose-gray dark:prose-invert prose-lg max-w-none">
           <h2>如何选择稳定好用的机场节点？2025年科学上网指南</h2>
           <p>
             在面对众多的网络加速服务商（俗称“机场”）时，用户往往会感到眼花缭乱。选择一个稳定、高速且性价比高的机场，
@@ -45,8 +45,8 @@ const SeoContent: React.FC = () => {
           </p>
         </article>
         
-        <div className="mt-12 pt-8 border-t border-slate-800 text-center">
-          <p className="text-sm text-slate-500">
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800 text-center">
+          <p className="text-sm text-gray-500 dark:text-slate-500">
             相关标签：#机场推荐 #梯子 #翻墙 #Clash订阅 #Shadowrocket #龙猫云 #肥猫云 #闪狐云 #飞鸟机场 #科学上网
           </p>
         </div>
