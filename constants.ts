@@ -13,7 +13,7 @@ export const PROVIDERS: Provider[] = [
     name: '龙猫云 (TotoroCloud)',
     description: '高端全专线机场，主打稳定性与流媒体解锁。拥有自研隧道技术，晚高峰表现优异，适合对网络质量有极高要求的用户。',
     longDescription: '龙猫云是目前市面上稳定性第一梯队的机场服务商。它全线采用 IPLC 专线传输，不过墙，彻底解决了敏感时期被封锁的烦恼。对于需要频繁访问 Google、ChatGPT 以及观看 Netflix/Disney+ 4K 流媒体的高端用户来说，龙猫云提供了几乎零丢包的极致体验。虽然价格稍高于平均水平，但考虑到其提供的 SLA 99.9% 在线率保证，绝对物超所值。',
-    websiteUrl: 'https://longmao.cloud/auth/register?code=YOUR_CODE', // 请替换链接
+    websiteUrl: 'https://inv05.lmaff01.cc/register?aff=OlHLrjO5',
     tags: ['IPLC专线', '流媒体解锁', '低延迟'],
     badge: '热点推荐',
     rating: 4.9,
@@ -36,7 +36,7 @@ export const PROVIDERS: Provider[] = [
     name: '肥猫云 (Fat Cat)',
     description: '性价比之选，线路丰富，能够满足各类流媒体和ChatGPT访问需求。拥有非常友好的新手教程和客服支持。',
     longDescription: '肥猫云主打“好用不贵”，是很多刚接触科学上网用户的首选。它提供了覆盖全球 20+ 个国家和地区的节点，无论是冷门地区 IP 需求，还是主流的港美日韩节点，都能轻松满足。肥猫云的客户端适配做得非常好，小白用户也能一键导入使用，无需复杂的配置。',
-    websiteUrl: 'https://feimaoyun.com/auth/register?code=YOUR_CODE', // 请替换链接
+    websiteUrl: 'https://inv02.fatcatcloud.cc/register?aff=zkyH2YU0',
     tags: ['高性价比', '新手友好', '客服优'],
     badge: '热点推荐',
     rating: 4.7,
@@ -59,7 +59,7 @@ export const PROVIDERS: Provider[] = [
     name: '闪狐云 (Flash Fox)',
     description: '以速度著称，采用顶级 BGP 接入，不仅网页浏览飞快，下载大文件也能跑满带宽。',
     longDescription: '如果你的宽带是千兆网络，那么闪狐云绝对能跑满你的带宽。它接入了顶级运营商的 BGP 线路，并进行了深度的路由优化，确保数据包走最短路径。非常适合下载大文件、更新 Steam 游戏或者进行跨国数据传输。',
-    websiteUrl: 'https://shanhu.io/register', // 请替换链接
+    websiteUrl: 'https://inv03.ffaff.cc/register?aff=T95Yj1Mf',
     tags: ['极速下载', 'BGP中转', '游戏加速'],
     rating: 4.6,
     startPrice: 25,
@@ -77,7 +77,7 @@ export const PROVIDERS: Provider[] = [
     id: 'xiaoxuanfeng',
     name: '小旋风 (Whirlwind)',
     description: '老牌平价机场，专注于提供稳定且廉价的服务。适合学生党和轻度用户，流量充裕。',
-    websiteUrl: 'https://xxf.net/register', // 请替换链接
+    websiteUrl: 'https://cina.xxfaff.cc/#/register?inviteCode=1A5C77B53707',
     tags: ['学生优惠', '大流量', '老牌'],
     rating: 4.5,
     startPrice: 15,
@@ -94,7 +94,7 @@ export const PROVIDERS: Provider[] = [
     id: 'fastlink',
     name: 'FastLink',
     description: 'Anycast 全球加速技术，自动选择最优路径。节点分布极广，涵盖全球主流国家和冷门地区。',
-    websiteUrl: 'https://fastlink.ws/auth/register', // 请替换链接
+    websiteUrl: 'https://flafflnk01.flaff9.cc/auth/register?code=vC3BoOXC',
     tags: ['Anycast', '全球覆盖', '抗封锁'],
     rating: 4.8,
     startPrice: 30,
@@ -112,7 +112,7 @@ export const PROVIDERS: Provider[] = [
     id: 'speedcat',
     name: 'SpeedCat',
     description: '正如其名，速度极快。采用 IEPL 内网专线，不仅快而且稳，特殊时期依然坚挺。',
-    websiteUrl: 'https://speedcat.com/register', // 请替换链接
+    websiteUrl: 'https://webinv02.sc-aff.cc/auth/register?code=byLcm6Gm',
     tags: ['IEPL专线', '特殊时期稳', '高速'],
     rating: 4.7,
     startPrice: 28,
@@ -129,7 +129,7 @@ export const PROVIDERS: Provider[] = [
     id: 'feitianzhu',
     name: '飞天猪 (Flying Pig)',
     description: '名字可爱但实力强悍，主打便宜大碗，入门套餐流量给的非常足，适合视频重度依赖者。',
-    websiteUrl: 'https://flypig.site/register', // 请替换链接
+    websiteUrl: 'https://fliggycloud.cc/#/register?code=d2hUQ0Ej',
     tags: ['便宜大碗', '视频专用', '流量多'],
     rating: 4.4,
     startPrice: 12,
@@ -146,7 +146,7 @@ export const PROVIDERS: Provider[] = [
     id: 'qingyunti',
     name: '青云梯 (Cloud Ladder)',
     description: '中高端定位，线路质量非常扎实。不追求极致低价，而是追求极致的连接成功率。',
-    websiteUrl: 'https://qingyunti.com/register', // 请替换链接
+    websiteUrl: 'https://ivt02.qytaff.cc/register?aff=qnGUXr1u',
     tags: ['连接率高', '商务首选', '稳定'],
     rating: 4.8,
     startPrice: 40,
@@ -163,7 +163,7 @@ export const PROVIDERS: Provider[] = [
     id: 'tntcloud',
     name: 'TNT Cloud',
     description: '爆发力强，瞬间连接速度快。拥有独特的隧道加密协议，安全性高，不易被识别。',
-    websiteUrl: 'https://tntcloud.com/auth/register', // 请替换链接
+    websiteUrl: 'https://tntyun.cc/#/register?code=lDlinhPT',
     tags: ['高安全', '加密隧道', '快速连接'],
     rating: 4.6,
     startPrice: 22,
@@ -180,7 +180,7 @@ export const PROVIDERS: Provider[] = [
     id: 'feiniao',
     name: '飞鸟机场 (Flying Bird)',
     description: '运营多年的老牌机场，积累了良好的口碑。节点维护及时，很少出现大面积瘫痪的情况。',
-    websiteUrl: 'https://feiniao.com/register', // 请替换链接
+    websiteUrl: 'https://feiniao.com/register',
     tags: ['口碑好', '运营久', '维护及时'],
     rating: 4.7,
     startPrice: 25,
@@ -197,7 +197,7 @@ export const PROVIDERS: Provider[] = [
     id: 'yinhe',
     name: '银河云 (Galaxy)',
     description: '致力打造银河系最强连接。全线 IPLC/IEPL 专线，价格稍贵但体验绝对是顶级的。',
-    websiteUrl: 'https://yinhe.cloud/auth/register', // 请替换链接
+    websiteUrl: 'https://inv03.galaxyaff.cc/register?aff=9IKlDVpe',
     tags: ['顶级体验', '全专线', '土豪首选'],
     rating: 4.9,
     startPrice: 50,
@@ -216,7 +216,7 @@ export const PROVIDERS: Provider[] = [
     name: '酷酷云 (KuKu Cloud)',
     description: '新晋高性价比混合线路机场，采用 IEPL 专线与优质中转节点混合负载，在保证核心应用体验的同时大幅降低了成本。',
     longDescription: '酷酷云是近期表现非常亮眼的“黑马”机场。它巧妙地结合了 IEPL 专线（用于游戏和敏感数据）和优质公网中转（用于流媒体和下载），实现了价格与体验的完美平衡。对于预算有限但又不想牺牲稳定性的用户来说，酷酷云是一个极佳的折中方案。其晚高峰表现稳定，且对冷门流媒体的解锁支持也相当不错。',
-    websiteUrl: 'https://kuku.cloud/register', // 请替换链接
+    websiteUrl: 'https://i01.kkyaffa.cc/register?aff=wF20d2NV',
     tags: ['混合线路', '性价比黑马', '流媒体解锁'],
     rating: 4.6,
     startPrice: 15.9,
