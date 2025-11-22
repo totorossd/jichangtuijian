@@ -14,7 +14,7 @@ export const PROVIDERS: Provider[] = [
     longDescription: '龙猫云是目前市面上稳定性第一梯队的机场服务商。它全线采用 IPLC 专线传输，不过墙，彻底解决了敏感时期被封锁的烦恼。对于需要频繁访问 Google、ChatGPT 以及观看 Netflix/Disney+ 4K 流媒体的高端用户来说，龙猫云提供了几乎零丢包的极致体验。虽然价格稍高于平均水平，但考虑到其提供的 SLA 99.9% 在线率保证，绝对物超所值。',
     tags: ['IPLC专线', '流媒体解锁', '低延迟'],
     rating: 4.9,
-    startPrice: 35,
+    startPrice: 15,
     speedScore: 98,
     stabilityScore: 99,
     logoUrl: 'https://picsum.photos/seed/longmao/100/100',
