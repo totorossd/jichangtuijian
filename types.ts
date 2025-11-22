@@ -18,6 +18,7 @@ export interface Provider {
   name: string;
   description: string;
   longDescription?: string;
+  websiteUrl: string; // 新增官网购买链接字段
   tags: string[];
   badge?: string;
   rating: number;

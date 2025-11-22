@@ -78,7 +78,12 @@ const DetailPage: React.FC = () => {
           </div>
         </div>
         <div className="flex-shrink-0 w-full md:w-auto flex flex-col gap-4">
-           <a href="#" className="w-full md:w-48 py-3 bg-primary-600 hover:bg-primary-500 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-600/30 transition-all transform hover:-translate-y-1">
+           <a 
+             href={provider.websiteUrl} 
+             target="_blank"
+             rel="noopener noreferrer"
+             className="w-full md:w-48 py-3 bg-primary-600 hover:bg-primary-500 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-600/30 transition-all transform hover:-translate-y-1"
+           >
              前往官网购买
            </a>
            <div className="grid grid-cols-2 gap-4 text-center">
