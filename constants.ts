@@ -20,7 +20,7 @@ export const PROVIDERS: Provider[] = [
     logoUrl: 'https://picsum.photos/seed/longmao/100/100',
     features: ['全节点解锁 Netflix/Disney+', '不限制设备数量', 'SLA 99.9% 保证'],
     plans: [
-      { name: "入门版", price: 35, period: "月付", traffic: "200G", features: ["IPLC专线", "流媒体解锁", "3个在线设备"] },
+      { name: "入门版", price: 15, period: "月付", traffic: "100G", features: ["IPLC专线", "流媒体解锁", "3个在线设备"] },
       { name: "标准版", price: 55, period: "月付", traffic: "500G", features: ["IPLC专线", "全节点解锁", "5个在线设备"] },
       { name: "至尊版", price: 99, period: "月付", traffic: "1000G", features: ["IPLC专线", "优先客服", "不限设备"] },
     ],
