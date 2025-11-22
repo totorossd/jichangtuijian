@@ -11,7 +11,7 @@ const AirportCard: React.FC<AirportCardProps> = ({ provider }) => {
     <div className="bg-white dark:bg-slate-850 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 group flex flex-col h-full relative">
       
       {provider.badge && (
-        <div className="absolute top-0 right-0 bg-gradient-to-bl from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-xl shadow-md z-20">
+        <div className="absolute top-0 left-0 bg-gradient-to-br from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-br-xl shadow-md z-20">
           {provider.badge}
         </div>
       )}

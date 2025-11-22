@@ -38,7 +38,7 @@ export const PROVIDERS: Provider[] = [
     longDescription: '肥猫云主打“好用不贵”，是很多刚接触科学上网用户的首选。它提供了覆盖全球 20+ 个国家和地区的节点，无论是冷门地区 IP 需求，还是主流的港美日韩节点，都能轻松满足。肥猫云的客户端适配做得非常好，小白用户也能一键导入使用，无需复杂的配置。',
     websiteUrl: 'https://inv02.fatcatcloud.cc/register?aff=zkyH2YU0',
     tags: ['高性价比', '新手友好', '客服优'],
-    badge: '热点推荐',
+    badge: '机场推荐',
     rating: 4.7,
     startPrice: 20,
     speedScore: 92,
