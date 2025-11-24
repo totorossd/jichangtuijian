@@ -181,7 +181,7 @@ const ClientTutorial: React.FC = () => {
   const data = TUTORIALS[key] || TUTORIALS.windows;
 
   useEffect(() => {
-    document.title = `${data.title} - CloudFly 科学上网指南`;
+    document.title = `${data.title} - Cloudfly机场推荐 | 科学上网指南`;
     window.scrollTo(0, 0);
   }, [key, data.title]);
 

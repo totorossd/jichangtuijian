@@ -43,7 +43,7 @@ const App: React.FC = () => {
                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                 </svg>
               </div>
-              <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">CloudFly<span className="text-primary-500">.Reviews</span></span>
+              <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">Cloudfly<span className="text-primary-500">机场推荐</span></span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
               <Link to="/" className="text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white transition-colors">首页</Link>
@@ -111,7 +111,7 @@ const App: React.FC = () => {
               免责声明：本站仅提供网络加速服务评测与技术交流，不提供任何非法网络服务。请遵守当地法律法规。
             </p>
             <p className="text-gray-400 dark:text-slate-600 text-xs">
-              &copy; {new Date().getFullYear()} CloudFly Reviews. Powered by React & Gemini.
+              &copy; {new Date().getFullYear()} Cloudfly机场推荐. Powered by React & Gemini.
             </p>
           </div>
         </footer>

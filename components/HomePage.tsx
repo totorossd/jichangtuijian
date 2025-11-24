@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    document.title = "2025稳定机场推荐 | 龙猫云/肥猫云/闪狐云/SpeedCat评测 | 云游指南";
+    document.title = "Cloudfly机场推荐 | 科学上网指南 | 2025稳定机场评测";
   }, []);
 
   const filteredProviders = useMemo(() => {
@@ -43,8 +43,11 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-primary-50/50 to-transparent dark:from-primary-500/10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
-            发现您的 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-purple-600 dark:from-primary-400 dark:to-purple-400">理想网络伴侣</span>
+            Cloudfly <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-purple-600 dark:from-primary-400 dark:to-purple-400">机场推荐</span>
           </h1>
+          <p className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white mb-4">
+             科学上网指南
+          </p>
           <p className="text-lg md:text-xl text-gray-600 dark:text-slate-400 max-w-2xl mx-auto mb-10">
             专业评测 龙猫云、肥猫云、闪狐云 等主流机场。基于真实数据，为您提供最客观的选购指南。
           </p>

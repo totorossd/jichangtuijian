@@ -14,7 +14,7 @@ const DetailPage: React.FC = () => {
 
   useEffect(() => {
     if (provider) {
-      document.title = `${provider.name} 怎么样？2025深度评测与价格表 | CloudFly`;
+      document.title = `${provider.name} 怎么样？2025深度评测与价格表 | Cloudfly机场推荐`;
       
       // Dynamic Meta Description Update (Basic)
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -205,7 +205,7 @@ const DetailPage: React.FC = () => {
             </section>
 
              <section className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-900 rounded-xl p-6 border border-gray-200 dark:border-slate-700">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">CloudFly 简评</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Cloudfly 简评</h3>
                 <p className="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
                   {provider.name} 在我们的测试中表现 {provider.speedScore > 90 ? '非常出色' : '良好'}。
                   其 {provider.tags[0]} 特性对于特定用户群体非常有吸引力。
