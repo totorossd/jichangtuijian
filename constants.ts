@@ -46,8 +46,12 @@ export const PROVIDERS: Provider[] = [
     logoUrl: 'https://picsum.photos/seed/feimao/100/100',
     features: ['4K 秒开', '多种订阅格式支持', '晚高峰速率保障'],
     plans: [
-      { name: "小猫套餐", price: 20, period: "月付", traffic: "150G", features: ["中转线路", "流媒体解锁", "2个在线设备"] },
-      { name: "大猫套餐", price: 35, period: "月付", traffic: "400G", features: ["高速中转", "全节点解锁", "5个在线设备"] },
+      { name: "BGP线路 * 肥猫年付加强版	", price: 96, period: "年付", traffic: "每月60G", features: ["BGP三线", "流媒体解锁", "不限制设备"] },
+      { name: "BGP线路*基础套餐", price: 20, period: "月付", traffic: "400G", features: ["BGP三线", "流媒体解锁", "不限制设备"] },
+      { name: "BGP线路*标准套餐", price: 40, period: "月付", traffic: "400G", features: ["BGP三线", "流媒体解锁", "不限制设备"] },
+      { name: "BGP线路*旗舰套餐", price: 100, period: "月付", traffic: "400G", features: ["BGP三线", "流媒体解锁", "不限制设备"] },
+      { name: "BGP线路*企业套餐	", price: 180, period: "月付", traffic: "400G", features: ["BGP三线", "流媒体解锁", "不限制设备"] },
+
     ],
     reviews: [
        { user: "Newbie001", rating: 5, date: "2024-10-20", content: "第一次买机场，客服手把手教我怎么设置，太感动了！" },
