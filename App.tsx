@@ -15,6 +15,8 @@ const App: React.FC = () => {
     return true; 
   });
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const root = window.document.documentElement;
     if (darkMode) {
@@ -30,6 +32,10 @@ const App: React.FC = () => {
     setDarkMode(prev => !prev);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-200 pb-20 font-sans selection:bg-primary-500/30 transition-colors duration-300">
@@ -37,7 +43,7 @@ const App: React.FC = () => {
         {/* Navbar - Global */}
         <nav className="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
               <div className="bg-gradient-to-br from-primary-500 to-purple-600 text-white p-2 rounded-lg shadow-lg shadow-primary-500/20">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
@@ -45,6 +51,8 @@ const App: React.FC = () => {
               </div>
               <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">Cloudfly<span className="text-primary-500">机场推荐</span></span>
             </Link>
+            
+            {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
               <Link to="/" className="text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white transition-colors">首页</Link>
               <Link to="/#chart" className="text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white transition-colors">数据对比</Link>
@@ -94,7 +102,76 @@ const App: React.FC = () => {
                 )}
               </button>
             </div>
+
+            {/* Mobile Menu Button Group */}
+            <div className="flex md:hidden items-center gap-3">
+               <button 
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors"
+                  aria-label="Toggle Dark Mode"
+                >
+                  {darkMode ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 24.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                  )}
+              </button>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors"
+                aria-label="Toggle Menu"
+              >
+                {isMobileMenuOpen ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Menu Content */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 shadow-xl absolute w-full left-0 z-40">
+              <div className="px-4 pt-4 pb-6 space-y-2">
+                <Link to="/" onClick={closeMobileMenu} className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                  首页
+                </Link>
+                <Link to="/#chart" onClick={closeMobileMenu} className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                  数据对比
+                </Link>
+                <Link to="/#guide" onClick={closeMobileMenu} className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                  选购指南
+                </Link>
+                
+                <div className="pt-2 pb-1 px-4">
+                  <p className="text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider mb-2">客户端教程</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Link to="/tutorial/windows" onClick={closeMobileMenu} className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                      <span className="text-blue-500">❖</span> Windows
+                    </Link>
+                    <Link to="/tutorial/android" onClick={closeMobileMenu} className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                      <span className="text-green-500">❖</span> Android
+                    </Link>
+                    <Link to="/tutorial/ios" onClick={closeMobileMenu} className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                      <span className="text-gray-900 dark:text-slate-100">❖</span> iOS
+                    </Link>
+                    <Link to="/tutorial/mac" onClick={closeMobileMenu} className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                      <span className="text-gray-500 dark:text-slate-400">❖</span> macOS
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </nav>
 
         {/* Route Content */}
